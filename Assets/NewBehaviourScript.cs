@@ -32,6 +32,6 @@ public class NewBehaviourScript : MonoBehaviour
     }
     void OnCollisionEnter (Collision collision)
     {
-        Debug.Log("衝突したオブジェクト: " + collision.gameObject.name);
+        Debug.Log("衝突したよ！オブジェクト: " + collision.gameObject.name);
     }
 }
