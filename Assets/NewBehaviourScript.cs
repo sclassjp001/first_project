@@ -18,10 +18,28 @@ public class NewBehaviourScript : MonoBehaviour
     void Update()
     {
         // スペースキーが押されたら
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.W))
         {
             // ボールに前方向（z軸方向）に力を加える
             rb.AddForce(transform.forward * forceAmount);
+        }
+
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            // ボールに左方向に力を加える
+            rb.AddForce(-transform.right * forceAmount);
+        }
+
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            // ボールに後ろ方向に力を加える
+            rb.AddForce(-transform.forward * forceAmount);
+        }
+
+        if (Input.GetKeyDown(KeyCode.D))
+        {
+            // ボールに右方向に力を加える
+            rb.AddForce(transform.right * forceAmount);
         }
         // if (Input.GetKey(KeyCode.W))
         // {
